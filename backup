@@ -1,0 +1,131 @@
+/* if($target_filename7!="")
+{
+    move_uploaded_file($_FILES["fileToUpload7"]["tmp_name"], $target_dir.$target_filename7);
+}
+if($target_filename8!="")
+{
+    move_uploaded_file($_FILES["fileToUpload8"]["tmp_name"], $target_dir.$target_filename8);
+}
+if($target_filename9!="")
+{
+    move_uploaded_file($_FILES["fileToUpload9"]["tmp_name"], $target_dir.$target_filename9);
+}
+if($target_filename10!="")
+{
+    move_uploaded_file($_FILES["fileToUpload10"]["tmp_name"], $target_dir.$target_filename10);
+}
+if($target_filename11!="")
+{
+    move_uploaded_file($_FILES["fileToUpload11"]["tmp_name"], $target_dir.$target_filename11);
+}
+if($target_filename12!="")
+{
+    move_uploaded_file($_FILES["fileToUpload12"]["tmp_name"], $target_dir.$target_filename12);
+}
+if($target_filename13!="")
+{
+    move_uploaded_file($_FILES["fileToUpload13"]["tmp_name"], $target_dir.$target_filename13);
+}
+if($target_filename14!="")
+{
+    move_uploaded_file($_FILES["fileToUpload14"]["tmp_name"], $target_dir.$target_filename14);
+}
+if($target_filename15!="")
+{
+    move_uploaded_file($_FILES["fileToUpload15"]["tmp_name"], $target_dir.$target_filename15);
+}
+if($target_filename16!="")
+{
+    move_uploaded_file($_FILES["fileToUpload16"]["tmp_name"], $target_dir.$target_filename16);
+}
+if($target_filename17!="")
+{
+    move_uploaded_file($_FILES["fileToUpload17"]["tmp_name"], $target_dir.$target_filename17);
+}
+if($target_filename18!="")
+{
+    move_uploaded_file($_FILES["fileToUpload18"]["tmp_name"], $target_dir.$target_filename18);
+}
+if($target_filename19!="")
+{
+    move_uploaded_file($_FILES["fileToUpload19"]["tmp_name"], $target_dir.$target_filename19);
+}
+if($target_filename20!="")
+{
+    move_uploaded_file($_FILES["fileToUpload20"]["tmp_name"], $target_dir.$target_filename20);
+} */ 
+
+/* $target_filename7 = $_FILES["fileToUpload7"]["name"];
+$target_filename8 = $_FILES["fileToUpload8"]["name"];
+$target_filename9 = $_FILES["fileToUpload9"]["name"];
+$target_filename10 = $_FILES["fileToUpload10"]["name"];
+$target_filename11 = $_FILES["fileToUpload11"]["name"];
+$target_filename12 = $_FILES["fileToUpload12"]["name"];
+$target_filename13 = $_FILES["fileToUpload13"]["name"];
+$target_filename14 = $_FILES["fileToUpload14"]["name"];
+$target_filename15 = $_FILES["fileToUpload15"]["name"];
+$target_filename16 = $_FILES["fileToUpload16"]["name"];
+$target_filename17 = $_FILES["fileToUpload17"]["name"];
+$target_filename18 = $_FILES["fileToUpload18"]["name"];
+$target_filename19 = $_FILES["fileToUpload19"]["name"];
+$target_filename20 = $_FILES["fileToUpload20"]["name"];
+$target_filename21 = $_FILES["fileToUpload21"]["name"];
+$target_filename22 = $_FILES["fileToUpload22"]["name"];
+$target_filename23 = $_FILES["fileToUpload23"]["name"]; */
+
+/* $target_filename7="";
+$target_filename8="";
+$target_filename9="";
+$target_filename10="";
+$target_filename11="";
+$target_filename12="";
+$target_filename13="";
+$target_filename14="";
+$target_filename15="";
+$target_filename16="";
+$target_filename17="";
+$target_filename18="";
+$target_filename19="";
+$target_filename20=""; */
+
+
+,'".$target_filename6."','".$three."','".$target_filename6."','".$four."','".$target_filename7."','".$five_a."','".$target_filename8."','".$five_b."','".$target_filename9."','".$six."','".$target_filename10."',,'".$seven."','".$target_filename11."','".$eight_a."','".$target_filename12."','".$eight_b."','".$target_filename13."','".$nine."','".$target_filename14."','".$ten."','".$target_filename14."','".$eleven_a."','".$target_filename15."','".$eleven_b."','".$target_filename16."','".$twelve_a."','".$target_filename17."','".$twelve_b."','".$target_filename18."','".$twelve_c."','".$target_filename19."','".$twelve_d."','".$target_filename20."','".$twelve_e."','".$target_filename21."','".$thirteen."','".$target_filename22."','".$fourteen."','".$target_filename23."','".$fifteen."','".$target_filename24."')"
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Database</title>
+</head>
+<body>
+    <h2>Student Database</h2>
+    <form method="post" action="">
+        <label>Enter Student ID:</label>
+        <input type="text" name="student_id">
+        <input type="submit" name="search" value="Search">
+    </form>
+
+    <?php
+    // Process the form submission
+    if (isset($_POST['search'])) {
+        include 'db_connection.php';
+
+        $student_id = $_POST['student_id'];
+
+        $sql = "SELECT name, roll_id FROM students WHERE id = $student_id";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            echo "<h3>Student Details</h3>";
+            echo "<table border='1'>";
+            echo "<tr><td>Name</td><td>ID</td></tr>";
+            echo "<tr><td>".$row['name']."</td><td>".$row['roll_id']."</td></tr>";
+            echo "</table>";
+        } else {
+            echo "Student not found.";
+        }
+
+        $conn->close();
+    }
+    ?>

@@ -1,0 +1,156 @@
+
+
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Merriweather', serif;;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+}
+.main-block{
+    width: 1270px;
+    height: 80px;
+    background-color:#FFEF82;
+    position: sticky;
+}
+.left-img-logo img{
+    float: left;
+    position: relative;
+    left: 20px;
+    padding-top: 15px;
+}
+.left-img-logo a{
+    text-decoration: none;
+    position: relative;
+    left: 5px;
+    top: 25px;
+    font-weight: bold;
+    font-size: 25px;
+    color: rgba(15, 5, 15, 0.792);;
+    margin-left: 10px;
+
+}
+#btnn{
+  margin-left: 90px;
+  background-color: azure;
+}
+.left-img-logo a:hover{
+    color: brown;
+    background-color: rgb(212, 211, 132);
+}
+.right-menu{
+  text-align: center;
+}
+.right-menu a{
+    text-decoration: none;
+    margin: 30px;
+    color: rgb(193, 82, 18);
+    font-weight: bold;
+    font-size: 20px;
+/* display: inline-block; */
+
+}
+.right-menu a:hover{
+    color: brown;
+    background-color:cornsilk ;
+}
+.dropdown{
+  float: right;
+}
+.dropdown button{
+margin-right: 10px;
+}
+
+  #home{
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(./back21.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 88%;
+}
+#home .content{
+  padding-top: 30px;
+  margin-left: 20px;
+}
+#home .content h3{
+  font-weight: bold;
+  color: aliceblue;
+  font-size: 100px;
+}
+#home .content p{
+  margin-top: 10px;
+  color:bisque;
+  font-size: 25px;
+}
+  #btn{
+    background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 25;
+  -moz-border-radius: 25;
+  border-radius: 25px;
+  -webkit-box-shadow: 4px 4px 4px #666666;
+  -moz-box-shadow: 4px 4px 4px #666666;
+  box-shadow: 4px 4px 4px #666666;
+  font-family: Georgia;
+  color: #faf0fa;
+  font-size: 28px;
+  padding: 10px;
+  text-decoration: none;
+}
+#btn:hover {
+    background: #59baf7;
+    background-image: -webkit-linear-gradient(top, #59baf7, #3498db);
+    background-image: -moz-linear-gradient(top, #59baf7, #3498db);
+    background-image: -ms-linear-gradient(top, #59baf7, #3498db);
+    background-image: -o-linear-gradient(top, #59baf7, #3498db);
+    background-image: linear-gradient(to bottom, #59baf7, #3498db);
+    text-decoration: none;
+  }
+   .dropbtn {
+    background-color: #5d5fd6;
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Style for dropdown content */
+  .dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 85px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .dropdown-content div {
+    padding: 10px 5px;
+  }
+  
+  /* Highlight dropdown options on hover */
+  .dropdown-content div:hover {
+    background-color: #eaeaea;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Highlight dropdown button when dropdown menu is open */
+  .dropdown:hover .dropbtn {
+    background-color: #474885;
+  }
+  

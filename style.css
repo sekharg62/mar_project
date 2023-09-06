@@ -1,0 +1,31 @@
+.success-icon {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.success-check {
+    width: 80px;
+    height: 40px;
+    border: 4px solid #4CAF50;
+    border-top: none;
+    border-right: none;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    transform: rotate(-45deg);
+    animation: successAnimation 1s ease-in-out infinite;
+}
+
+@keyframes successAnimation {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    100% {
+        width: 80px;
+        height: 40px;
+        opacity: 1;
+    }
+}
